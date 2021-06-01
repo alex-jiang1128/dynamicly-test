@@ -76,7 +76,7 @@ function Expense() {
 
   return (
     <div className="expense-container">
-      <h2 className="header-title">Expense Tracker</h2>
+      <h2 className="header-title">Expense tracker</h2>
       <div className="header-wrapper">
         <div className="total-title">
           <span>{`The sub-total of expenses is ${subTotal}$`}</span><br/>
@@ -87,7 +87,7 @@ function Expense() {
           variant="contained"
           onClick={handleAddExpense}
         >
-          Add New Expense
+          Add new expense
         </Button>
       </div>
       <Card className="w-100 overflow-auto" elevation={6}>
