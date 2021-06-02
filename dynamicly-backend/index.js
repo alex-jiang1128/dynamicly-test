@@ -59,7 +59,7 @@ MongoClient.connect(`mongodb://${MONGO_HOST}:27017`, {
     });
 
     app.put("/expenses", (req, res) => {
-      const { id, date, ...rest } = req.body;
+      const { id, ...rest } = req.body;
       expensesCollection
         .findOneAndUpdate({ _id: new mongodb.ObjectID(id) }, {$set: {...rest }}, {
           upsert: true,

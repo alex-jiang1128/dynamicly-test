@@ -35,10 +35,10 @@ function ExpenseDialog(props) {
 
   const handleFormSubmit = useCallback(() => {
     const { id } = data;
+    const today = moment().toISOString();
     if (id) {
-      dispatch(updateExpense({ ...data }))
+      dispatch(updateExpense({ ...data, date: today }))
     } else {
-      const today = moment().toISOString();
       dispatch(addExpense({ ...data, date: today }))
     }
     handleClose()
